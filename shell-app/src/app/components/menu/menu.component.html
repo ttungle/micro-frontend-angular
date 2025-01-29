@@ -1,0 +1,19 @@
+<div class="grid grid-cols-4 gap-x-8 gap-y-8 mx-auto">
+  @for(item of menuList(); track item) {
+  <div>
+    <img
+      [src]="item.image"
+      [alt]="item.alt"
+      class="h-[12.5rem] w-full object-cover"
+    />
+    <h2 class="text-3xl text-orange-400 font-bold text-center mt-8">
+      {{ item.name }}
+    </h2>
+    <p class="text-center mt-4 leading-8">
+      {{ item.description }}
+      <br />
+      {{ item.subDescription }}
+    </p>
+  </div>
+  }
+</div>
